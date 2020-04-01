@@ -1,5 +1,8 @@
 require_relative '../lib/tic_tac_toe.rb'
 
+@board = TicTacToe.new
+@board.play
+
 describe './lib/tic_tac_toe.rb' do
   describe TicTacToe do
     describe '#initialize' do
