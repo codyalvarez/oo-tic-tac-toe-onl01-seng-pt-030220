@@ -1,7 +1,7 @@
 require "pry"
-class TicTacToe 
+class TicTacToe
 
-  def initialize(board = nil) 
+  def initialize(board = nil)
    @board = board || Array.new(9, " ")
  end
 
@@ -16,7 +16,7 @@ class TicTacToe
    [6,4,2]
  ]
 
-  def display_board 
+  def display_board
    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
    puts "-----------"
    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
@@ -85,7 +85,7 @@ def turn
   end
 end
 
-  
+
 def won?
   WIN_COMBINATIONS.detect do |combo|
     position_taken?(combo[0]) && @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]]
@@ -111,7 +111,7 @@ end
 def over?
   if won? || draw? == true
     return true
-  else 
+  else
     return false
   end
 end
@@ -123,11 +123,11 @@ def winner
     end
   end
 
-  def play 
+  def play
     while over? == false
       turn
     end
-    
+
     if draw?
       puts "Cat's Game!"
     elsif winner == "X"
@@ -138,5 +138,3 @@ def winner
   end
 
 end
-  
-
